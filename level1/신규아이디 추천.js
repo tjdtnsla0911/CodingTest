@@ -33,9 +33,7 @@ function solution(new_id) {
                 changeDuple = [... changeDuple , v];
                 changeDuple = [... changeDuple , v+1]; //걍일단 중복 시키고 밑에서 제거하자
             }else{
-                4,5/
-                6,7
-            
+         
                 console.log('###changeDuple = ',[...new Set(changeDuple)]);
                 
                [...new Set(changeDuple)].reverse().forEach((v,i)=>{

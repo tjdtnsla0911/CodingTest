@@ -12,4 +12,3 @@ function solution(n) {
     }
     return answer;
 }
-출처: https://ghost4551.tistory.com/108 [프론트 개발자들을 위한 티스토리:티스토리]

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text" id="test"><br />
+    <button onclick="sha256Start()">비번 해시화 테스트 </button>
+
+</body>
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<script>
+    //만든 API 테스트 , 타입은 post로 하고 데이터는 오브젝트 타입으로 key 이름은 맘대로 ㅎ
+    const sha256Start = () => {
+        const data = document.getElementById("test").value ;
+        console.log('data = ',data);
+        axios({
+            url: 'http://3.37.118.97:8080/kimsungsoo/goodboy',
+            method: 'POST', 
+            data:  { req : data }
+        }).then((res) => {
+            alert(`해쉬화한 니비번 :${res.data}`);
+        }).catch((e) => {
+            console.log('e = ', e);
+        });
+    }
+</script>
+
+</html>
